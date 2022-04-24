@@ -1,0 +1,73 @@
+body{
+    background-color: red;
+    margin: 0;
+}
+
+.header{
+    background-color: green;
+    display: flex;
+    justify-content: space-between;
+}
+
+.site-title{
+    font-size: 3rem;
+    margin: 5px;
+}
+
+.search-bar{
+    margin: 15px;
+}
+
+.search-input{
+    padding: 5px;
+    width: 200px;
+    font-size: medium;
+}
+
+.search-btn{
+    margin-left: -5px;
+    padding: 5px;
+    width: 80px;
+    font-size: medium;
+}
+
+.main{
+    background-color: yellow;
+    margin: 20px;
+}
+
+.container{
+    background-color: lightblue;
+}
+
+.videos-listing{
+    background-color: blueviolet;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.video{
+    background-color: aqua;
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid black;
+    width: 400px;
+}
+
+.thumbnail{
+    width: 400px;
+}
+
+.pages{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.page-btn{
+    margin-left: 10px;
+    margin-right: 5px;
+    padding: 10px;
+    font-size: medium;
+}
