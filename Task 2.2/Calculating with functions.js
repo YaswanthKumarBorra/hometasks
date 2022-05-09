@@ -1,4 +1,4 @@
-http://www.codewars.com/kata/calculating-with-functions
+//http://www.codewars.com/kata/calculating-with-functions
 
 function zero(n) {
     return n ? Math.floor(eval('0' + n)) : 0;

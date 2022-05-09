@@ -2,16 +2,6 @@
 
 function rentalCarCost(d) {
   // Your solution here
-  if(d>=7)
-    {
-    return (d*40)-50;
-    }
-  else if(d>=3)
-    {
-      return (d*40)-20;
-    }
-  else
-    {
-      return d*40;
-    }
+  let discount = (d<3)?0:(d>=3 && d<7)?20:50;
+  return (d*40)-discount;
 }

@@ -16,7 +16,3 @@ var santa = {
 var notSanta = {
     sayHoHoHo: function () { console.log('Oink Oink!') }
 };
-
-console.log(isSantaClausable(santa));
-console.log(isSantaClausable(notSanta));
-
