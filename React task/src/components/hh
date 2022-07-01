@@ -1,0 +1,58 @@
+<div className='orderedBookCover'>
+                  <img src={order.coverPage} alt="coverpage" width="100px"/>
+                </div>
+               
+
+
+
+                <div className='orderedBookCover'>
+                    
+                  </div>
+                  <div className='orderBookDetails'>
+                    
+                  </div>
+
+
+
+
+                  <div className="order">
+                    <div className="order-header">
+                        <span>Order Placed: {order.date}</span>
+                        <span>Status: Delivered</span>
+                    </div>
+                    <div className="order-body">
+                        <div className="book-order-img">
+                            <img src={order.coverPage} alt="Book Cover Page" />
+                        </div>
+                        <div className="book-order-info">
+                            <div className="book-order-title">
+                                <b>{order.title}</b> X {order.count}
+                            </div>
+                            <div className="book-order-authors">
+                                Author(s): {order.author}
+                            </div>
+                            <div className="book-order-price">
+                                Price: {CURRENCY}{Number(TOTAL_PRICE).toFixed(2)}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div key={index} className="order">
+                    <div className='order-header'>
+                      <div className='date'>Order Placed : {order.date}</div>
+                      <div className='status'>Status : Delivered</div>
+                    </div>
+                    <div className='order'>
+                      <div className='orderedBookCover'>
+                        <img src={order.coverPage} alt="coverpage" width="100px"/>
+                      </div>
+                      <div className='order-body'>
+                        Title : {order.title}<br/>
+                        Author : {order.author}<br/>
+                        Price : {order.price}  X {order.count}<br/>
+                      </div>
+                    </div>
+                  </div>
