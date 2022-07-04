@@ -34,13 +34,15 @@ function fetchResultsWithVideoDetails(ids) {
 function renderVideos(videoData) {
     renderPagination(no_of_pages);
     videosPerPage(videoData, 1);
-    let pages = document.querySelectorAll(".page-btn");
-    for(let page of pages){
-        page.addEventListener("click",function(){
-            let pageNo = this.innerHTML;
+    let pages = document.querySelector("#pages-container");
+    //console.log(pages);
+    
+    pages.addEventListener("click",function(e){
+        if(e.target !== e.currentTarget) {
+            let pageNo = e.target.innerHTML;
             videosPerPage(videoData, pageNo)
-       });
-    }
+        }
+    });
 }
 
 function renderPagination(no_of_pages){
