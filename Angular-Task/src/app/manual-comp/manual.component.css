@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 4rem;
+}
+p {
+    font-weight: lighter;
+}
+
+.card {
+    margin: 10px;
+    background-color: lightgray;
+}

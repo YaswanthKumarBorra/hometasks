@@ -1,0 +1,9 @@
+nav {
+    margin: 20px;
+    border-bottom: 2px solid grey;
+    flex-direction: row-reverse;
+}
+
+.active {
+    font-weight: bold;
+}
