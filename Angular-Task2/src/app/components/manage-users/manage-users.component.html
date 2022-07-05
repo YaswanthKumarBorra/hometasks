@@ -1,0 +1,89 @@
+<!-- <div class="row">
+    <div *ngFor="let user of usersList">
+        <div class="card col-sm-4">
+            <div [className]="user.isDeleted === false ? 'active':'inactive'">
+                <div class="card-body">
+                    <h5 class="card-title">{{user.firstName}} {{user.lastName}}</h5>
+                    <div class="text-end">
+                        <a class="btn btn-primary" (click)="userDetails(user)">Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="userDetails col-sm-4">
+        <div *ngIf="selectedUser">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">{{selectedUser.firstName}} {{selectedUser.lastName}}</h2>
+                    <div class="card-text">
+                    <div [className]="selectedUser.isDeleted === false ? 'activeuser' : 'inactiveUser'">
+                        {{selectedUser.isDeleted === false ? "Active" : "Deleted"}}
+                    </div>
+                    <div>
+                        <label>Login id</label>
+                        {{selectedUser.login}}
+                    </div>
+                    <div>
+                        <label>First Name</label>
+                        {{selectedUser.firstName}}
+                    </div>
+                    <div>
+                        <label>Last Name</label>
+                        {{selectedUser.lastname}}
+                    </div>
+                    <div>
+                        <label>Age</label>
+                        {{selectedUser.age}}
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+<div class="row">
+    <div class="col-md-6">
+      <div class="card" *ngFor="let user of usersList">
+        <div [className]="user.isDeleted === false ? 'active':'inactive'">
+            <div class="card-body">
+                <h5 class="card-title">{{user.firstName}} {{user.lastName}}</h5>
+                <div class="text-end">
+                    <a class="btn btn-primary" (click)="userDetails(user)">Details</a>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card">
+        <div *ngIf="selectedUser" class="user">
+            <div class="userdetailscard-body">
+                <h2 class="card-title">{{selectedUser.firstName}} {{selectedUser.lastName}}</h2>
+                <div [className]="selectedUser.isDeleted === false ? 'activeUser' : 'inactiveUser'">
+                    {{selectedUser.isDeleted === false ? "Active" : "Deleted"}}
+                </div>
+                <div class="userdetails">
+                    <div>
+                        <label>Login id : </label>
+                        {{selectedUser.login}}
+                    </div>
+                    <div>
+                        <label>First Name : </label>
+                        {{selectedUser.firstName}}
+                    </div>
+                    <div>
+                        <label>Last Name : </label>
+                        {{selectedUser.lastName}}
+                    </div>
+                    <div>
+                        <label>Age : </label>
+                        {{selectedUser.age}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
