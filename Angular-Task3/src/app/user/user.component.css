@@ -1,0 +1,12 @@
+.form-group {
+    width: 500px;
+    padding: 50px;;
+}
+
+input, label, button {
+    margin: 10px;
+}
+
+h1{
+    text-align: center;
+}
