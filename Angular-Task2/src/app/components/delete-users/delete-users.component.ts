@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserServicesService } from 'src/app/services/user-services.service';
+import { User } from 'src/app/services/users';
 
 @Component({
   selector: 'app-delete-users',
@@ -8,7 +9,8 @@ import { UserServicesService } from 'src/app/services/user-services.service';
 })
 export class DeleteUsersComponent implements OnInit {
 
-  inactiveUsers:any ;
+  inactiveUsers!:User[] ;
+  activateUser!: User;
   
   constructor(private users: UserServicesService) { }
   
@@ -16,9 +18,7 @@ export class DeleteUsersComponent implements OnInit {
     this.inactiveUsers = this.users.getUsers();
   }
 
-  activateUser: any;
-
-  activate(user: any): void {
+  activate(user: User): void {
     this.activateUser = user;
     console.log(this.activateUser)
     this.activateUser.isDeleted = false;

@@ -9,7 +9,8 @@ import { User } from 'src/app/services/users';
 })
 export class ManageUsersComponent implements OnInit {
 
-  usersList: User[]=[];
+  usersList!: User[];
+  user!: User;
 
   constructor(private users: UserServicesService) { }
 
@@ -17,19 +18,8 @@ export class ManageUsersComponent implements OnInit {
     this.usersList = this.users.getUsers();
     //console.log(this.usersList);
   }
-
-  user: any;
-
-  getClassName() {
-    return this.user.isDeleted === false ? 'activeUser' : 'inactiveUser'
-  }
-
-  getStatus() {
-    return this.user.isDeleted === false ? "Active" : "Deleted"
-  }
-
   
-  userDetails(user: any): void {
+  userDetails(user: User): void {
     this.user = user;
   }
 

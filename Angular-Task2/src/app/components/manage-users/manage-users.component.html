@@ -16,8 +16,8 @@
         <div *ngIf="user" class="user">
             <div class="userdetailscard-body">
                 <h2 class="card-title">{{user.firstName}} {{user.lastName}}</h2>
-                <div [className]="getClassName()">
-                    {{getStatus()}}
+                <div [className]="user.isDeleted === false ? 'activeUser' : 'inactiveUser'">
+                    {{user.isDeleted === false ? 'Active' : 'Deleted'}}
                 </div>
                 <div class="userdetails">
                     <div>
