@@ -1,0 +1,272 @@
+header {
+    background-color: lightgray;
+    display: flex;
+    padding: 20px 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .title {
+    margin-left: 20px;
+    font-size: xx-large;
+    
+}
+
+header .title .title-link {
+    text-decoration: none;
+}
+
+header ul {
+    display: flex;
+    margin-left: auto;
+}
+
+header ul li {
+    list-style: none;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+header ul li .navbar-link {
+    text-decoration: none;
+    font-size: x-large;
+}
+
+.book-container {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    row-gap: 5px;
+    justify-items: center;
+}
+
+.books {
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid black;
+}
+
+.books:hover {
+    background-color: lightgray;
+    cursor: context-menu;
+}
+
+.book-title, .book-price {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.buy-btn {
+    cursor: pointer;
+    border: none;
+    padding: 10px 30px;
+    font-size: medium;
+}
+
+.buy-btn:hover {
+    background-color: white;
+}
+
+.book-info {
+    margin: 20px;
+    display: flex;
+}
+
+.bookinfo-coverpage{
+    width: max-content;
+}
+
+.bookinfo-details {
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: larger;
+}
+
+.bookinfo-title {
+    font-size: xx-large;
+}
+
+.btns button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.btns button:hover {
+    background-color: lightgreen;
+}
+
+.bookinfo-descp {
+    margin-left: 300px;
+    margin-right: 100px;
+    text-align: justify;
+    font-size: 1.5rem;
+}
+
+.bookinfo-descp label {
+    font: 2rem bold;
+}
+
+.cart {
+    display: grid;
+    margin: 10px;
+    row-gap: 20px;
+    column-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 2fr));
+}
+
+.address {
+    height: max-content;
+    width: 400px;
+    border: 1px solid black;
+}
+
+.address-form {
+    margin: 5px;
+    font-size: larger;
+} 
+.address label {
+    margin: 20px;
+    padding: 10px;
+    display: inline-block;
+}
+
+input,textarea {
+    border: none;
+    padding: 10px;
+    width: max-content;
+}
+
+#save {
+    background-color: lightgreen;
+}
+
+#edit {
+    background-color: lightyellow;
+}
+
+#save, #edit {
+    margin-bottom: 10px;
+    justify-items: center;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.cart-book-container {
+    display: flex;
+    column-gap: 40px;
+    
+}
+
+.book-image img{
+    margin-top: 5px;
+    width: 60px;
+}
+
+#remove {
+    background-color: lightcoral;
+    border: none;
+    padding: 5px;
+    height: min-content;
+    cursor: pointer;
+}
+
+.payment {
+    margin-top: 20px;
+}
+
+.payment-table {
+    margin: 20px;
+    padding: 10px;
+    font-size: larger;
+
+}
+
+#checkout, #cancel {
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    padding: 5px;
+}
+
+#checkout:hover {
+    background-color: lightgreen;
+}
+
+#cancel:hover {
+    background-color: red;
+}
+
+.orders {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+.order {
+    margin: 10px;
+    border: 2px solid black
+}
+
+.order-header {
+    display: flex;
+    padding: 5px;
+    border-bottom: 2px solid gray;
+    justify-content: space-between;
+}
+
+.orderCover{
+    width: 100px;
+}
+
+.order-body {
+    display: flex;
+    column-gap: 10px;
+    padding: 1rem
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
+    .book-info {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .bookinfo-coverpage{
+        width:auto;
+        margin-left: 0px;
+    }
+
+    .bookinfo-title{
+        font-size: large;
+    }
+
+    .bookinfo-details {
+        margin: 0;
+        font-size: medium;
+    }
+
+    .bookinfo-descp {
+        margin: 20px;
+        font-size: medium;
+    }
+
+    .cart-book-container, .payment {
+        justify-content: center;
+    }
+}
