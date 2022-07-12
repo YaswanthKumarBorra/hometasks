@@ -13,7 +13,7 @@ const Cart = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
     
-  const saveAdrs = (e) => {
+  const saveAdrs = () => {
     const addressFrom  = new FormData(document.getElementById('addressForm'));
     console.log(addressFrom)
     const newAddress = {
@@ -116,18 +116,16 @@ const Cart = () => {
           tempCart.map((book) => {
             return (
               <div key={book.id}>
-              <div className='cart-book-container'>
-                <div className='book-image'>
-                    <img src={ book.coverPage } alt="coverpage"/>
+                <div className='cart-book-container'>
+                  <div className='book-image'>
+                      <img src={ book.coverPage } alt="coverpage"/>
+                  </div>
+                  <div className='book-cart-details'> 
+                    <span>{book.title}</span><br/>
+                    <span>Rs.{book.price} X {book.count}</span>
+                  </div>
+                  <button id="remove" onClick={() => remove(book.id)}>Remove</button>
                 </div>
-                <div className='book-cart-details'> 
-                  <span>{book.title}</span><br/>
-                  <span>Rs.{book.price} X {book.count}</span>
-                  
-                </div>
-                <button id="remove" onClick={() => {remove(book.id)}}>Remove</button>
-              </div>
-                
               </div>
             )
           })

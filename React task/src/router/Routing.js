@@ -1,16 +1,44 @@
 import React from 'react'
-import Home from '../components/Home';
-import Details from '../components/Details';
-import Orders from '../components/Orders';
-import Cart from '../components/Cart';
+import { Home, Details, Orders, Cart } from '../components';
 import { Route, Routes } from 'react-router-dom'
+
+const RouteList = [
+  {
+    path: "/",
+    element: <Home />
+  },
+  {
+    path: "/details",
+    element: <Details />
+  },
+  {
+    path: "/orders",
+    element: <Orders />
+  },
+  {
+    path: "/cart",
+    element: <Cart />
+  },
+]
+
 const Routing = () => {
   return (
     <Routes>
-      <Route path="/" element={ <Home /> }/>
-      <Route path="/details" element={ <Details /> }/>
+      {
+        RouteList.map((individualRoute, index) => {
+          return(
+            <Route key={index} path={individualRoute.path} element={individualRoute.element}/>
+          )
+        })
+      }
+
+
+
+
+      
+      {/* <Route path="/details" element={ <Details /> }/>
       <Route path="/orders" element={ <Orders /> }/>
-      <Route path="/cart" element={ <Cart /> }/>
+      <Route path="/cart" element={ <Cart /> }/> */}
     </Routes>
   )
 }

@@ -233,3 +233,40 @@ input,textarea {
     column-gap: 10px;
     padding: 1rem
 }
+
+@media screen and (max-width: 600px) {
+    header {
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
+    .book-info {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .bookinfo-coverpage{
+        width:auto;
+        margin-left: 0px;
+    }
+
+    .bookinfo-title{
+        font-size: large;
+    }
+
+    .bookinfo-details {
+        margin: 0;
+        font-size: medium;
+    }
+
+    .bookinfo-descp {
+        margin: 20px;
+        font-size: medium;
+    }
+
+    .cart-book-container, .payment {
+        justify-content: center;
+    }
+}
