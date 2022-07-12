@@ -1,0 +1,14 @@
+<div class="container">
+    <div *ngFor="let user of inactiveUsers">
+        <div [className]="user.isDeleted === true ? 'inactive':'active'">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{user.firstName}}</h5>
+                    <div class="text-end">
+                        <a class="btn btn-success" (click)="activate(user)">Activate</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

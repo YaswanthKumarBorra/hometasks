@@ -1,0 +1,8 @@
+.card {
+    margin-bottom: 10px;
+    border: 2px solid red;
+}
+
+.active {
+    display: none;
+}

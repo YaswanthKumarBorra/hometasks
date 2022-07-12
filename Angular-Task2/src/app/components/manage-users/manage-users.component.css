@@ -1,0 +1,39 @@
+.row {
+    margin: 10px;
+}
+
+.card {
+    margin-bottom: 10px;
+    border: none;
+}
+
+.active {
+    border: 2px solid green;
+    border-radius: 0.2rem;
+}
+
+.inactive {
+    border: 2px solid red;
+    border-radius: 0.2rem;
+}
+
+.activeUser {
+    color: green;
+}
+
+.inactiveUser {
+    color: red;
+}
+
+.user {
+    margin: 50px;
+    padding: 50px;
+    font-size: larger;
+    border: 2px solid black;
+    border-radius: 0.5rem;
+}
+
+.userdetails {
+    margin-top: 10px;
+    font-size: 1.5rem;
+}
